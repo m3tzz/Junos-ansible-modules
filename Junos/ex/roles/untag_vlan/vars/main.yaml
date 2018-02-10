@@ -1,0 +1,8 @@
+---
+interfaces:
+ - name: xe-3/0/3
+   unit_id: 0
+   vlan_name: vlan.69
+ - name: xe-3/0/3
+   unit_id: 0
+   vlan_name: vlan.1120

@@ -1,0 +1,23 @@
+---
+  - name: "delete l3 vlan"
+    juniper_junos_config:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: "{{ port }}"
+      #timeout: 40
+      load: 'set'
+      lines:
+        - 'delete interfaces vlan unit {{ item.unit_id }}'
+        - 'delete vlans {{ item.vlan_name }}'
+      retrieve: 'candidate'
+      #filter: 'interfaces'
+      ignore_warning: 'statement not found'
+      comment: "delete l3 vlan {{ item.vlan_name }} via ansible"
+      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/ex/roles/rm_vlanl3/tasks/output/"
+    with_items:
+      - "{{ interfaces }}"
+    register: response
+  #- name: "Print the response"
+  #  debug:
+  #    var: response

@@ -1,0 +1,8 @@
+---
+vlans:
+ - name: vlan.69
+   description: REDTUBE
+   id: 69
+ - name:
+   description: PORNOTUBE
+   id: 669

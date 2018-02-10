@@ -1,0 +1,22 @@
+---
+  - name: 'delete l2 vlan'
+    juniper_junos_config:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: "{{ port }}"
+      load: 'set'
+      lines:
+        - 'delete vlans {{ item.name }}'
+      retrieve: 'candidate'
+      #filter: 'vlans'
+      ignore_warning: 'statement not found'
+      comment: 'delete l2 vlan {{ item.name }} via ansible'
+      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/ex/roles/rm_vlanl2/tasks/output/"
+    with_items:
+      - "{{ vlans }}"
+    register: response
+
+  #- name: "Print the response"
+  #  debug:
+  #    var: response

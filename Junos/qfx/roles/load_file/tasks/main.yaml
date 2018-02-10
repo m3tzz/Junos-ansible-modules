@@ -1,0 +1,15 @@
+---
+  - name: Load override from a file and saved config
+    juniper_junos_config:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: "{{ port }}"
+      timeout: 50
+      load: 'override'
+      url: '/var/tmp/{{ inventory_hostname }}.conf'
+      comment: "Load override from a file with current config - {{ inventory_hostname }}.conf via ansible"
+    register: response
+  - name: Print the complete response.
+    debug:
+      var: response

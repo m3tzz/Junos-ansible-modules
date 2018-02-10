@@ -1,0 +1,10 @@
+[all:vars]
+username=junos
+password=junos-root
+port=22
+
+[ex-sw1]
+192.168.1.1
+
+[qfx-sw1]
+192.168.2.1

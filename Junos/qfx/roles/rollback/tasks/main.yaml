@@ -1,0 +1,17 @@
+---
+#
+# Rollback
+#
+  - name: "Rollback to previous config"
+    juniper_junos_config:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: "{{ port }}"
+      rollback: 1
+      comment: 'rollback configuration 1'
+    register: response
+
+  - name: "Print the differences"
+    debug:
+      var: response.diff_lines

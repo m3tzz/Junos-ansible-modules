@@ -1,0 +1,15 @@
+---
+- name: 'Deploy configuration on Junos EX'
+  hosts: "{{ ci_name }}"
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+    - { role: add_vlanl2, tags: add_vlanl2 }
+    - { role: rm_vlanl2, tags: rm_vlanl2 }
+    - { role: add_vlanl3, tags: add_vlanl3 }
+    - { role: rm_vlanl3, tags: rm_vlanl3 }
+    - { role: tag_vlan, tags: tag_vlan }
+    - { role: untag_vlan, tags: untag_vlan }
+    - { role: rollback, tags: rollback }
+    - { role: load_file, tags: load_file }

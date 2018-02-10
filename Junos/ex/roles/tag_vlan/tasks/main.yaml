@@ -1,0 +1,22 @@
+---
+  - name: "Tag vlan on interface"
+    juniper_junos_config:
+      host: "{{ inventory_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: "{{ port }}"
+      #timeout: 40
+      load: 'set'
+      lines:
+        - 'set interfaces {{ item.name }} unit {{ item.unit_id }} family ethernet-switching vlan members {{ item.vlan_name }}'
+      retrieve: 'candidate'
+      #filter: 'interfaces'
+      ignore_warning: 'statement not found'
+      comment: "Tag vlan {{ item.vlan_name }} on interface {{ item.name }} via ansible"
+      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/ex/roles/tag_vlan/tasks/output/"
+    with_items:
+      - "{{ interfaces }}"
+    register: response
+  #- name: "Print the response"
+  #  debug:
+  #    var: response
