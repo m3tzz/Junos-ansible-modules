@@ -12,9 +12,7 @@ First, go inside of the folder related with juniper devices model you want to ma
 e.g --> cd /Junos/ex
 
 -t means the name of the tag you defined on your playbook
-
 -e means the name of the tag you defined on your playbook to call a device or more then one device
-
 --ask-vault-pass - provide the ansible-vault password to run playbook
 
 
