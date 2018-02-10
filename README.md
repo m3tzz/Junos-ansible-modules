@@ -1,5 +1,5 @@
 
-Rerence --> http://junos-ansible-modules.readthedocs.io/en/2.0.1/
+Juniper.junos Ansible Modules --> http://junos-ansible-modules.readthedocs.io/en/2.0.1/
 
 ################ To install the modules##########
 
