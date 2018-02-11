@@ -4,6 +4,7 @@ Juniper.junos Ansible Modules --> http://junos-ansible-modules.readthedocs.io/en
 ################ To install the modules##########
 
 Run this command below:
+
 ansible-galaxy install Juniper.junos,2.0.1
 
 ############ How to run the playboox###############
