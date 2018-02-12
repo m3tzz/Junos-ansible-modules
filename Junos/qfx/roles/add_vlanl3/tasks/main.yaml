@@ -18,7 +18,7 @@
       #filter: 'interfaces'
       ignore_warning: 'statement not found'
       comment: "configure l3 vlan {{ item.vlan_name }} via ansible"
-      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/qfx/roles/add_vlanl3/tasks/output/"
+      dest_dir: "output/"
     with_items:
       - "{{ interfaces }}"
     register: response
