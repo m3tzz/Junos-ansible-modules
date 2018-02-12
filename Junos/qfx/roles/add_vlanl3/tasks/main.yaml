@@ -11,7 +11,7 @@
         - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} virtual-address {{ item.vip }} priority {{ item.priority }}'
         - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} accept-data'
         - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} authentication-type md5'
-        - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} authentication-key "$9$bjwYoGUHT3/s2mTF3puRhS"'
+        - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} authentication-key "sddfrgj44535tS"'
         - 'set interfaces irb unit {{ item.unit_id }} family inet address {{ item.ip }}/{{ item.mask }} vrrp-group {{ item.vrrp_id }} track interface {{ item.int_ae }} priority-cost {{ item.cost }}'
         - 'set vlans {{ item.vlan_name }} vlan-id {{ item.unit_id }} description {{ item.vlan_description }} l3-interface {{ item.vlan_name }}'
       retrieve: 'candidate'
