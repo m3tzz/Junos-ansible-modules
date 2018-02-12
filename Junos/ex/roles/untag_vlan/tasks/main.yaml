@@ -13,7 +13,7 @@
       #filter: 'interfaces'
       ignore_warning: 'statement not found'
       comment: "Untag vlan {{ item.vlan_name }} on interface {{ item.name }} via ansible"
-      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/ex/roles/untag_vlan/tasks/output/"
+      dest_dir: "output/"
     with_items:
       - "{{ interfaces }}"
     register: response
