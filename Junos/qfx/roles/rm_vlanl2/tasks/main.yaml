@@ -12,7 +12,7 @@
       #filter: 'vlans'
       ignore_warning: 'statement not found'
       comment: 'delete l2 vlan {{ item.name }} via ansible'
-      dest_dir: "/home/OAD/rbarbosa/ansible/Junos/qfx/roles/rm_vlanl2/tasks/output/"
+      dest_dir: "output/"
     with_items:
       - "{{ vlans }}"
     register: response
