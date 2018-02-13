@@ -13,6 +13,14 @@ ansible-galaxy install Juniper.junos,2.0.1
 
 --> http://junos-ansible-modules.readthedocs.io/en/2.0.1/
 
+################## Inventory file ##################
+
+In case you put the password in your inventory then encrypt the file with follow command:
+
+ansible-vault hosts encrypt 
+
+Then defined the password ****
+
 
 ############ How to run the playboox###############
 
