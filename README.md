@@ -25,7 +25,8 @@ Then defined the password ****
 ############ How to run the playboox###############
 
 First, go inside of the folder related with juniper devices model you want to made changes
-e.g --> cd /Junos/ex
+
+e.g --> cd /Junos/qfx or cd /Junos/ex
 
 -t means the name of the tag you defined on your playbook
 -e means the name of the tag you defined on your playbook to call a device or more then one device
